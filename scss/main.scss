@@ -1,0 +1,12 @@
+// Eu gosto de organizar o CSS em SASS por tipo de conteúdo e por seções.
+
+@import 'config';
+@import 'mixin';
+@import 'animation';
+@import 'fonts';
+@import 'elements';
+@import 'menu';
+@import 'sections';
+@import 'banner';
+
+// Quando você coloca um underline antes do novo do arquivo, ele não é compilado quando você usa compilador de SASS automático igual eu faço, assim você evita de ficar gerando arquivos desnecesários, e na hora de importar só precisa do nome do arquivo, sem o underline nem a extensão do arquivo.

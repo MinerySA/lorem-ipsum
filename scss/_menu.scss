@@ -1,0 +1,100 @@
+.header{
+    .menu-bar{
+        // a tag menu tem um padding e margin default, eu preciso garantir que não vão interferir no meu estilo
+        padding: 0;
+        margin: 24px 0;
+
+        .item{
+            padding: 16px 32px;
+            text-decoration: none;
+            color: $text-main;
+            display: inline-block;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+#menu{
+    #menu-toogle{
+        display: none;
+        z-index: 999;
+        transition: all 500ms linear;
+        top: 1rem;
+        left: 1rem;
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        background: $white;
+        border-radius: 4rem;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .open{ display: block; }
+        .close{ display: none; }
+        
+        @include adapt("max-width: 921px"){
+            display: flex;
+        }
+    }
+
+    @include adapt("max-width: 921px"){
+        .menu-bar{            
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            left: 0px; top: 0px;            
+            width: 100vw; height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            background: $secondary-color;
+            z-index: 998;
+
+            .item{ 
+                text-align: center;
+                margin: 0.5rem 0;
+                font-size: 1.25rem;
+                line-height: 2rem;
+                color: $white;
+                display: block;
+                outline: none;
+                text-decoration: none;
+    
+                &:hover, &:focus, &:active{
+                    background: $primary-color;
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &.active{
+            #menu-toogle{
+                background-color: transparent;
+                .open{ display: none; }
+                .close{ display: block; }
+            }
+
+            .menu-bar{
+                display: flex;
+                @include slide(100ms);
+                .item{
+                    @include delay(100ms);
+                    @include slide(500ms);
+                    & + .item{ @include delay(200ms);
+                        & + .item{ @include delay(300ms);
+                            & + .item{ @include delay(400ms);
+                                & + .item{ @include delay(500ms); }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

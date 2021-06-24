@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- Lang zxx é utilizada para determinar que o idioma do texto é "Lorem Ipsum", o famoso lero lero da programação pra ocupar espaço. Todo o conteúdo de texto desse site foi gerado em um desses sites geradores de lorem ipsum. -->
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Referência do desafio técnico para desenvolvedor frontend na Minery.">
+    <meta name="keywords" content="HTML, SASS, CSS">
+    <meta name="author" content="Willian Almeida Rodrigues">
+
+    <title>Lorem Ipsum</title>
+
+    <!-- Muita gente fala mal de frameworks css, mas a verdade é que a gente utiliza eles por facilidade de não precisar codificar algo que já tem pronto do zero. Grandes empresas utilizam frameworks css próprios pra construção de páginas web. Os benefícios são muitos: padronização de código, recursos bem definidos, documentados e otimizados. O Bootstrap por exemplo passou por uma completa reestruturação para se adequar ao flexbox, agora já bem mais difundido e da uma liberdade muito maior no quesito responsividade. Além disso, você pode escolher o que quer utilizar, no caso eu vou usar somente dois recursos do bootstrap: 1. O reboot, que é um recurso muito utilizado para resetar o estilo do seu site, padronizando o ponto inicial, já que alguns navegadores possuem caracteristicas diferentes de apresentação de algumas coisas / 2. O grid. O Grid do bootstrap é absolutamente a maior vantagem de utilizar esse recurso, ele permite a construção ágil, padronizada e organizada de sites completamente responsivos sem muito esforço, melhor que isso só se você mesmo construir o seu grid com todos os recursos para que ele trabalhe a responsividade, mas ai é outra história. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap-grid.min.css" />
+
+    <!-- Como CSS é um estilo em cascada, eu vou colocar o meu CSS por último pra sobrepor qualquer eventual coisa que os recursos do bootstrap venham a utilizar. -->
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+    <div id="page">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <nav class="col">
+                        <div id="menu">
+                            <a id="menu-toogle" onclick="toogleMenu()">
+                                <img src="./img/menu.svg" alt="abrir menu" class="open" />
+                                <img src="./img/close.svg" alt="fechar menu" class="close" />
+                            </a>
+                            <menu class="menu-bar" id="menu">
+                                <a href="#" tabindex="0" class="item" onclick="menuClick()">Home</a>
+                                <a href="#lorem-ipsum" tabindex="0" class="item" onclick="menuClick()">Lorem Ipsum</a>
+                                <a href="#phasellus" tabindex="0" class="item" onclick="menuClick()">Phasellus</a>
+                                <a href="#suspendisse" tabindex="0" class="item" onclick="menuClick()">Suspendisse</a>
+                            </menu>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="section banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-8">
+                        <!-- Eu não user um h1 ou qualquer outro heading aqui porque não é um título, é só um texto atrativo pra chamar a tenção pro banner, de toda forma, cada página só pode ter 1 h1, pois ele seria o título do documento (html) e não de uma seção. -->
+                        <div class="head-title">Donec dapibus eget odio id commodo.</div>
+                        <div class="space"></div>
+                        <a href="#" class="btn btn-white">Donec eu nunc</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section notebook" id="lorem-ipsum">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-6 offset-lg-6">
+                        <header class="section-header">
+                            <h2 class="section-title">Orci varius natoque penatibus</h2>
+                        </header>
+                        <div class="section-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper varius est. Vestibulum eu pellentesque risus, a fringilla libero. Duis congue dapibus turpis et tempor.</p>
+                            <ul>
+                                <li>Phasellus ultrices neque sed ex feugiat convallis.</li>
+                                <li>Sed tempus est non diam dictum consequat.</li>
+                                <li>Sed eget massa tempor, volutpat lacus nec, iaculis diam.</li>
+                                <li>Praesent condimentum justo non posuere malesuada.</li>
+                                <li>Sed at leo at nibh auctor facilisis vel vel purus.</li>
+                            </ul>
+                        </div>
+                        <footer class="section-footer">
+                            <a href="#" class="btn">Nullam in molestie</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-grey align-center" id="phasellus">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xl-6 offset-xl-3">
+                        <header class="section-header">
+                            <h2 class="section-title">Fusce suscipit iaculis</h2>
+                        </header>
+                        <div class="content">
+                            <p>Morbi nec erat sed mi suscipit auctor. Vestibulum nisl diam, lobortis et nulla vitae, ultricies placerat dui. Phasellus semper nisi non nibh finibus, at laoreet eros molestie. Nullam in molestie lectus, mollis laoreet nisl.</p>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="col d-flex">
+                        <section class="card-list">
+                            <div class="card">
+                                <div class="card-picture"><img src="./img/card-1.png" alt="Card 1"></div>
+                                <div class="card-caption">Praesent volutpat molestie arcu</div>
+                            </div>
+                            <div class="card">
+                                <div class="card-picture"><img src="./img/card-2.png" alt="Card 2"></div>
+                                <div class="card-caption">Praesent volutpat molestie arcu</div>
+                            </div>
+                            <div class="card">
+                                <div class="card-picture"><img src="./img/card-3.png" alt="Card 3"></div>
+                                <div class="card-caption">Praesent volutpat molestie arcu</div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="section no-height" id="suspendisse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-9 col-sm-9 col-lg-6 offset-lg-2">
+                        <header class="section-header align-center">
+                            <h2 class="section-title">Aliquam erat volutpat</h2>
+                        </header>
+                        <div class="content align-center">
+                            <p>Duis a libero maximus, condimentum libero ac, feugiat justo. Nulla facilisi. Integer in quam ullamcorper, cursus urna at, maximus magna. Aliquam vehicula vitae neque vel gravida</p>
+                        </div>
+                    </div>
+                    <div class="col-3 col-sm-2 col-lg-2 d-flex align-items-end">
+                        <img src="./img/arrow.png" alt="subscribe" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col offset-0 col-sm-9 offset-sm-3 col-xl-5 offset-xl-5 align-right">
+                        <div class="subscribe-field">
+                            <input type="mail" placeholder="digite seu e-mail" class="subscribe-input flex-fill" />
+                            <input type="button" value="Enviar" class="subscribe-btn" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col"><div class="divider"></div></div>
+            </div>
+        </div>
+
+        <div id="poweredby">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6">Desenvolvido por Lorem Ipsum</div>
+                    <div class="col-12 col-sm-6 align-right">Todos os direitos reservados - 2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
+</body>
+</html>
