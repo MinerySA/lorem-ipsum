@@ -8,16 +8,20 @@ img{ max-width: 100%; }
 a{ color: $secondary-color; }
 
 .btn{
-    padding: 20px 48px;
-    line-height: 24px;
-    font-size: 18px;
-    font: 18px/24px "PT Sans";
+    padding: 1.75rem 3rem;
+    line-height: 1.5rem;
+    font: 1.25rem/1.5rem "PT Sans";
     text-transform: uppercase;
     letter-spacing: 1.8px;
     display: inline-block;
     border: 1px solid $primary-color;
     color: $primary-color;
     text-decoration: none;
+
+    @include adapt("max-width: 360px"){ 
+        font: 1rem/1rem "PT Sans";
+        padding: 1.5rem 2rem;
+    }
 
     &:hover{
         transform: translateX(1px) translateY(1px);
@@ -42,10 +46,11 @@ a{ color: $secondary-color; }
         position: relative;
         margin: 2rem;
         @include adapt("max-width: 991px"){ margin: 1rem; }
+        @include adapt("max-width: 360px"){ margin: 1rem 0; }
 
         .card-picture{
             width: 16rem;
-            min-width: 256px;
+            min-width: 240px;
             aspect-ratio: 1/1;
             display: flex;
             background: $white;
@@ -79,12 +84,15 @@ a{ color: $secondary-color; }
         }
 
         &:hover{
+            z-index: 900;
+            
             .card-picture{
                 transform: scale(1.17);
             }
             .card-caption{
                 opacity: 1;
                 transform: translateX(-50%) translateY(70%);
+                z-index: 901;
             }
         }
     }
@@ -105,9 +113,10 @@ a{ color: $secondary-color; }
 
     .subscribe-input{
         border: 0px;
-        display: flex;
+        display: block;
         line-height: 2rem;
         padding: 0.75rem 1.5rem;
+        width: 0px;
         background: transparent;
         outline: none;
 
@@ -133,10 +142,18 @@ a{ color: $secondary-color; }
             transform: scale(1.1);
             padding-left: 2.5rem;
             padding-right: 2.5rem;
+            @include adapt("max-width: 991px"){
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
         }
     }
 }
 
 .space{
-    margin-top: 64px;
+    margin-top: 4rem;
+
+    @include adapt("max-width: 991px"){
+        margin-top: 2.5rem;
+    }
 }

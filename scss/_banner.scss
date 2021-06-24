@@ -5,14 +5,16 @@
         background: url('../img/banner.png') no-repeat 0% center,  $gradient;
         // background-size: 100% auto, 200% 200%;
     }
+    
 
     .head-title{
-        font: normal normal 800 4rem/4rem "Open Sans";
+        font: normal normal 800 4rem/1.5 "Open Sans";
         letter-spacing: 0px;
         color: #FFFFFF;
         text-shadow: 0px 0.25rem 0.5rem #0000006e;
         text-transform: uppercase;
 
-        @include adapt("max-width: 991px"){ font-size: 3rem !important; }
+        @include adapt("max-width: 991px"){ font-size: 3rem; }
+        @include adapt("max-width: 360px"){ font-size: 2.5rem; }
     }
 }

@@ -52,16 +52,22 @@ a {
 }
 
 .btn {
-  padding: 20px 48px;
-  line-height: 24px;
-  font-size: 18px;
-  font: 18px/24px "PT Sans";
+  padding: 1.75rem 3rem;
+  line-height: 1.5rem;
+  font: 1.25rem/1.5rem "PT Sans";
   text-transform: uppercase;
   letter-spacing: 1.8px;
   display: inline-block;
   border: 1px solid #DF1CC5;
   color: #DF1CC5;
   text-decoration: none;
+}
+
+@media screen and (max-width: 360px) {
+  .btn {
+    font: 1rem/1rem "PT Sans";
+    padding: 1.5rem 2rem;
+  }
 }
 
 .btn:hover {
@@ -103,9 +109,15 @@ a {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .card-list .card {
+    margin: 1rem 0;
+  }
+}
+
 .card-list .card .card-picture {
   width: 16rem;
-  min-width: 256px;
+  min-width: 240px;
   aspect-ratio: 1/1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,6 +165,10 @@ a {
   opacity: 0;
 }
 
+.card-list .card:hover {
+  z-index: 900;
+}
+
 .card-list .card:hover .card-picture {
   -webkit-transform: scale(1.17);
           transform: scale(1.17);
@@ -162,6 +178,7 @@ a {
   opacity: 1;
   -webkit-transform: translateX(-50%) translateY(70%);
           transform: translateX(-50%) translateY(70%);
+  z-index: 901;
 }
 
 .subscribe-field {
@@ -186,11 +203,10 @@ a {
 
 .subscribe-field .subscribe-input {
   border: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   line-height: 2rem;
   padding: 0.75rem 1.5rem;
+  width: 0px;
   background: transparent;
   outline: none;
 }
@@ -238,8 +254,21 @@ a {
   padding-right: 2.5rem;
 }
 
+@media screen and (max-width: 991px) {
+  .subscribe-field .subscribe-btn:hover, .subscribe-field .subscribe-btn:focus {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 .space {
-  margin-top: 64px;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .space {
+    margin-top: 2.5rem;
+  }
 }
 
 .header .menu-bar {
@@ -399,6 +428,18 @@ a {
           flex-direction: column;
 }
 
+@media screen and (max-width: 991px) {
+  .section {
+    padding: 4.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .section {
+    min-height: 100vh !important;
+  }
+}
+
 .section.no-height {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -492,7 +533,7 @@ a {
 }
 
 .banner .head-title {
-  font: normal normal 800 4rem/4rem "Open Sans";
+  font: normal normal 800 4rem/1.5 "Open Sans";
   letter-spacing: 0px;
   color: #FFFFFF;
   text-shadow: 0px 0.25rem 0.5rem #0000006e;
@@ -501,6 +542,12 @@ a {
 
 @media screen and (max-width: 991px) {
   .banner .head-title {
-    font-size: 3rem !important;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .banner .head-title {
+    font-size: 2.5rem;
   }
 }

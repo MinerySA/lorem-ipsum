@@ -8,6 +8,8 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    @include adapt("max-width: 991px"){ padding: 4.5rem 2rem; }
+    @include adapt("max-width: 360px"){ min-height: 100vh !important; }
 
     &.no-height{ min-height: fit-content; }
     &.section-grey{ background: #F5F5F5; }
