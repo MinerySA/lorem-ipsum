@@ -1,2 +1,5 @@
 # lorem ipsum
- Frontend Challenge
+Frontend Challenge
+
+# Powered By
+Minery SA
